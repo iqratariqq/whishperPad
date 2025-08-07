@@ -42,7 +42,7 @@ app.use(express.json());
 // })
 
 app.use(cors(
-{origin:"http://localhost:5173"}
+{origin:"https://react-frontend-sigma-two.vercel.app/"}//in your case put your localhost 
 ))
 app.use(rateLimit); // Apply rate limiting middleware
 
