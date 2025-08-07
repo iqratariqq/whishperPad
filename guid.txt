@@ -1,0 +1,72 @@
+🖥️ BACKEND SETUP
+
+First, initialize your Node.js project:
+npm init -y
+This command creates a package.json file.
+
+Install Express (version 4.18.2):
+npm i express@4.18.2
+Avoid using version 5 because it is still in beta.
+
+Set up the development server:
+Open your package.json file and add the following under the "scripts" section:
+"dev": "nodemon server.js"
+To run the server, use:
+npm run dev
+(If you haven't already, install nodemon using: npm i -D nodemon)
+
+Use ES6 import/export syntax instead of require:
+In package.json, add this line at the top level:
+"type": "module"
+
+Install Mongoose to work with MongoDB:
+npm i mongoose@7.0.3
+Mongoose helps in connecting and interacting with your MongoDB (NoSQL) database.
+
+Install dotenv to use environment variables:
+npm i dotenv
+Create a .env file to store your sensitive data like this:
+MONGO_URI=your-mongodb-url
+Example MongoDB URI:
+mongodb+srv://iqrat269:vLlEh5t0fKuPfyZP@cluster0.nxegblz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+Install and configure Rate Limit with Upstash to prevent excessive requests:
+npm i @upstash/ratelimit@2.0.5 @upstash/redis@1.34.9
+
+Enable CORS to allow your frontend to connect with the backend:
+npm i cors@2.8.5
+
+Note: An endpoint is a URL combined with an HTTP method (like GET, POST, etc.) used to access backend services.
+
+💻 FRONTEND SETUP
+
+Create the frontend project using Vite:
+npm create vite@latest
+Vite is a fast and modern alternative to Create React App.
+
+Install React Router for page routing:
+npm i react-router
+This allows navigation without reloading the page.
+
+Install react-hot-toast to show popup notifications:
+npm i react-hot-toast
+
+Install Tailwind CSS for styling:
+npm install -D tailwindcss@3 postcss autoprefixer
+Then initialize Tailwind with:
+npx tailwindcss init -p
+After that, follow the setup instructions from the official Tailwind CSS documentation.
+
+(Optional but helpful) Install the Tailwind CSS IntelliSense extension in VS Code.
+It gives class name suggestions while you type.
+
+Install daisyUI to use pre-built Tailwind components:
+npm i -D daisyui@latest
+This makes it easier to use UI components like btn, card, etc.
+
+Install Lucide React for beautiful icons:
+npm i lucide-react
+
+Install Axios to send API requests to the backend:
+npm i axios
+
