@@ -41,9 +41,14 @@ app.use(express.json());
 //     next();
 // })
 
-app.use(cors(
-{origin:"https://react-frontend-sigma-two.vercel.app/"}//in your case put your localhost 
-))
+
+
+app.use(cors({
+  origin: "https://react-frontend-sigma-two.vercel.app", // ✅ Your frontend URL,in your case put your localhost 
+
+  credentials: true
+}));
+
 app.use(rateLimit); // Apply rate limiting middleware
 
 app.use("/api/notes", notesRoutes);
