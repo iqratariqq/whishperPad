@@ -8,12 +8,12 @@ import cors from "cors"; // Import CORS for handling cross-origin requests
 import notesRoutes from "./routes/notesRoutes.js";
 import { connectDB } from "./config/db.js";
 import rateLimit from "./Middelware/rateLimit.js";
-
+import path from 'path';
 dotenv.config(); // Load environment variables from .env file
 
 // For debugging purposes, to check if the environment variable is loaded correctly
 
-const port = process.env.PORT|| 5000; // Use the PORT from .env or default to 5000
+const port = process.env.PORT|| 3000; // Use the PORT from .env or default to 5000
 
 //  connectDB();// in this way first serverbstart then db connect but it's not a recommended way
 
